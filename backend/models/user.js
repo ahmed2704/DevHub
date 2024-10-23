@@ -18,6 +18,8 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    likedResources: [{ type: Schema.Types.ObjectId, ref: 'Resource' }], 
+    bookmarkedResources: [{ type: Schema.Types.ObjectId, ref: 'Resource' }],
   },
   {
     timestamps: true,
