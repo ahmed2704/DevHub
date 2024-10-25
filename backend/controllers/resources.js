@@ -39,7 +39,7 @@ async function createResource(req, res) {
   try {
     const newResource = new Resource({
       ...req.body,
-      user: req.user._id, // Assuming you're using authentication
+      user: req.user._id,
     });
     await newResource.save();
     res.status(201).json(newResource);
